@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Audio Files - sonicremote</title>
+    </head>
+    <body>
+        <h1>Audio Files</h1>
+        <!-- this is really neat! 
+            https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates -->
+        {% for file in files %}
+        <div><p><a href='play/{{ file.id }}'>{{ file.name }}</a></p></div>
+        {% endfor %}
+    </body>
+</html>
