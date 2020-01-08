@@ -8,7 +8,11 @@ play sounds remotely.
 
 In the source directory, make a folder called `audio` and
 put your audio files in there. They must all be prefixed by
-a unique two-digit number.
+a unique two-digit number followed by a dash.
+
+So, if you wanted to add a file called `song.mp3`, you'd
+need to rename it to `XX-song.mp3` where XX is a unique
+two digit number.
 
 ## Development Environment
 
