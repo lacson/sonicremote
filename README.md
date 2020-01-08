@@ -4,6 +4,12 @@
 Simple Flask app that serves a webapp that lets a user
 play sounds remotely.
 
+## Setup
+
+In the source directory, make a folder called `audio` and
+put your audio files in there. They must all be prefixed by
+a unique two-digit number.
+
 ## Development Environment
 
 ### Prerequisites
@@ -23,3 +29,8 @@ dependencies for this project don't clog up our local machine.
 Once we're running in the virtual environment, as evidenced by the `(.venv) >`
 in our terminal prompts, run `pip install -r requirements.txt`. This pulls
 our dependencies that we need for the project.
+
+#### (macOS only) PyObjC
+
+I didn't want to add this dependency into `requirements.txt` because it will cause
+non Windows/Linux environments to fail. When running in the virtualenv, run
