@@ -15,7 +15,12 @@ flask_app = Flask(__name__)
 # define endpoints here
 @flask_app.route('/')
 def home():
-    return "Hello world"
+    # TODO: make a template we can serve up
+    return make_response("Hello World!")
+
+@flask_app.route('/heartbeat')
+def heartbeat():
+    return make_response(0)
 
 # run our flask app here
 if __name__ == "__main__":
