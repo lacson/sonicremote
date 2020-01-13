@@ -1,0 +1,123 @@
+/**  
+ * I use CSS Grid for formatting and placing everything.
+ *
+ * Here are some relevant links if you want to learn more:
+ * MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+ * YouTube: https://www.youtube.com/watch?v=jV8B24rSN5o&t=1455s 
+ */
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+nav {
+  height: 180px;
+  padding: 0 12%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0038a8;
+  color: #fff;
+}
+
+.title {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 42px;
+  color: #fff;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 22px;
+  color: #fcd116;
+}
+
+hr {
+  margin: 0 12%;
+  border-color: #ce1126;
+}
+
+article {
+  margin: 23px 12%;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+article span {
+  font-weight: 300;
+  text-transform: none;
+}
+
+.file-grid {
+  margin: 23px 12%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 15px;
+}
+
+.file-name span {
+  font-size: 64px;
+  text-align: center;
+  margin: 15px;
+}
+
+.file-name {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  margin: 15x;
+  line-height: 2;
+  padding-bottom: 12px;
+  font-weight: 300;
+  font-size: 18px;
+  background-color: #b3b3b3;
+  transition: background-color 0.2s linear;
+}
+
+.file-name:hover {
+  background-color: #fcd116;
+  transition: background-color 0.2s linear;
+}
+
+@media only screen and (max-width: 1200px) {
+  .file-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .file-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .file-grid {
+    /* background-color: black; */
+    /* margin: 0 %; */
+    margin: 23px 5%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  article {
+    margin: 23px 5%;
+  }
+
+  hr {
+    margin: 0 5%;
+  }
+
+  nav {
+    padding: 0 5%;
+  }
+}
